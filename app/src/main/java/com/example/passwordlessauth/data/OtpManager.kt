@@ -1,4 +1,5 @@
 package com.example.passwordlessauth.data
+import timber.log.Timber
 
 /**
  * Holds OTP-related information for a single email
@@ -29,6 +30,9 @@ class OtpManager {
             createdAt = System.currentTimeMillis(),
             attemptsLeft = 3
         )
+
+        // DEBUG ONLY: log OTP since there is no backend
+        Timber.d("Generated OTP for $email is $otp")
 
         return otp
     }
