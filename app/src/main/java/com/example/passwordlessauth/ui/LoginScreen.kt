@@ -31,15 +31,27 @@ fun LoginScreen(
             value = email,
             onValueChange = { email = it },
             label = { Text("Email address") },
+            placeholder = { Text("Enter your email") },
             singleLine = true,
             modifier = Modifier.fillMaxWidth(),
+            textStyle = MaterialTheme.typography.bodyLarge,
             colors = OutlinedTextFieldDefaults.colors(
                 focusedTextColor = MaterialTheme.colorScheme.onSurface,
                 unfocusedTextColor = MaterialTheme.colorScheme.onSurface,
+
+                focusedLabelColor = MaterialTheme.colorScheme.primary,
+                unfocusedLabelColor = MaterialTheme.colorScheme.onSurface,
+
+                focusedPlaceholderColor = MaterialTheme.colorScheme.onSurfaceVariant,
+                unfocusedPlaceholderColor = MaterialTheme.colorScheme.onSurfaceVariant,
+
+                cursorColor = MaterialTheme.colorScheme.primary,
+
                 focusedBorderColor = MaterialTheme.colorScheme.primary,
                 unfocusedBorderColor = MaterialTheme.colorScheme.outline
             )
         )
+
 
 
         Spacer(modifier = Modifier.height(16.dp))

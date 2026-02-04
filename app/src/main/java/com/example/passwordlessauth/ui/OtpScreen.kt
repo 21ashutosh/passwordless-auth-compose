@@ -34,15 +34,27 @@ fun OtpScreen(
             value = otp,
             onValueChange = { otp = it },
             label = { Text("6-digit OTP") },
+            placeholder = { Text("Enter OTP") },
             singleLine = true,
             modifier = Modifier.fillMaxWidth(),
+            textStyle = MaterialTheme.typography.bodyLarge,
             colors = OutlinedTextFieldDefaults.colors(
                 focusedTextColor = MaterialTheme.colorScheme.onSurface,
                 unfocusedTextColor = MaterialTheme.colorScheme.onSurface,
+
+                focusedLabelColor = MaterialTheme.colorScheme.primary,
+                unfocusedLabelColor = MaterialTheme.colorScheme.onSurface,
+
+                focusedPlaceholderColor = MaterialTheme.colorScheme.onSurfaceVariant,
+                unfocusedPlaceholderColor = MaterialTheme.colorScheme.onSurfaceVariant,
+
+                cursorColor = MaterialTheme.colorScheme.primary,
+
                 focusedBorderColor = MaterialTheme.colorScheme.primary,
                 unfocusedBorderColor = MaterialTheme.colorScheme.outline
             )
         )
+
 
 
         Spacer(modifier = Modifier.height(16.dp))
